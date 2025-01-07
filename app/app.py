@@ -56,7 +56,7 @@ st.markdown(
 # Set the favicon and page title
 st.set_page_config(
     page_title="Emotion Recognition",
-    page_icon="favicon.png",  # Replace with your favicon file path
+    page_icon="/mount/src/doc/app/icon.png",
     layout="wide",
 )
 
