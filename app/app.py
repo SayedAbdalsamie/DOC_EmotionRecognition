@@ -12,7 +12,7 @@ try:
     #     r"C:\progremming ask zagzig\AI_0\doc\DOC_Emotion Prediction\app\models\modelF.keras"
     # )
     # Ensure this path is correct
-    model = pickle.load(open("models/model.pkl", "rb"))
+    model = pickle.load(open("/mount/src/doc/app/models/model.pkl", "rb"))
 except Exception as e:
     st.error(f"Error loading model: {e}")
     st.stop()
