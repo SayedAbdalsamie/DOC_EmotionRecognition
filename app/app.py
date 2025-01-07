@@ -8,10 +8,6 @@ from io import BytesIO
 
 # Load the pre-trained model
 try:
-    # model = load_model(
-    #     r"C:\progremming ask zagzig\AI_0\doc\DOC_Emotion Prediction\app\models\modelF.keras"
-    # )
-    # Ensure this path is correct
     model = pickle.load(open("/mount/src/doc/app/models/model.pkl", "rb"))
 except Exception as e:
     st.error(f"Error loading model: {e}")
@@ -57,9 +53,11 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# App title with emoji
-st.markdown(
-    '<h1 class="title">Emotion Classification App 😄</h1>', unsafe_allow_html=True
+# Set the favicon and page title
+st.set_page_config(
+    page_title="Emotion Recognition",
+    page_icon="favicon.png",  # Replace with your favicon file path
+    layout="wide",
 )
 
 # Upload or URL input
@@ -100,3 +98,12 @@ if uploaded_file is not None or image_url:
         f"**Predicted Emotion:** {predicted_emotion_with_emoji} {predicted_emotion}"
     )
     st.markdown("</div>", unsafe_allow_html=True)
+    # Footer
+st.markdown(
+    """
+    <div style='text-align: center; color: #555555; font-size: 12px;'>
+        <p>Created with Sayed Abdalsamie</p>
+    </div>
+""",
+    unsafe_allow_html=True,
+)
