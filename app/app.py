@@ -8,14 +8,14 @@ from io import BytesIO
 # Must be the first Streamlit command
 st.set_page_config(
     page_title="Emotion Recognition",
-    page_icon="icon.png",  # Replace with your favicon path
+    page_icon="/mount/src/doc_emotionrecognition/app/icon.png",  # Replace with your favicon path
     layout="wide",
 )
 
 # Load the pre-trained model
 try:
     model = pickle.load(
-        open("models/model.pkl", "rb")
+        open("/mount/src/doc_emotionrecognition/app/models/model.pkl", "rb")
     )
 except Exception as e:
     st.error(f"Error loading model: {e}")
