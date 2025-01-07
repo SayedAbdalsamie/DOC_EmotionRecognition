@@ -7,7 +7,7 @@ from io import BytesIO
 
 # Load the pre-trained model
 try:
-    model = pickle.load(open("/mount/src/doc/app/models/model.pkl", "rb"))
+    model = pickle.load(open("/mount/src/DOC_EmotionRecognition/app/models/model.pkl", "rb"))
 except Exception as e:
     st.error(f"Error loading model: {e}")
     st.stop()
