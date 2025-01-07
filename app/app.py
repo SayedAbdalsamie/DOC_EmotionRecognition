@@ -7,7 +7,7 @@ from io import BytesIO
 
 # Load the pre-trained model
 try:
-    model = pickle.load(open("/mount/src/DOC_EmotionRecognition/app/models/model.pkl", "rb"))
+    model = pickle.load(open("app/models/model.pkl", "rb"))
 except Exception as e:
     st.error(f"Error loading model: {e}")
     st.stop()
@@ -55,7 +55,7 @@ st.markdown(
 # Set the favicon and page title
 st.set_page_config(
     page_title="Emotion Recognition",
-    page_icon="/mount/src/doc/app/icon.png",
+    page_icon="/mount/src/DOC_EmotionRecognition/app/icon.png",
     layout="wide",
 )
 
